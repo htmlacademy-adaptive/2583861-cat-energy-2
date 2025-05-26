@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Функциональное питание для котов Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -37,24 +41,28 @@
       <div class="promo__container">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__image" width="280" height="270" src="#" alt="Изображение баночки с кошачьим питанием Cat Energy">
+        <picture>
+          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
+          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
+          <img class="promo__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Изображение баночки с кошачьим питанием Cat Energy">
+        </picture>
         <a class="promo__button button button--primary" href="#">Подобрать программу</a>
       </div>
     </section>
     <section class="services">
       <h2 class="visually-hidden">Предлагаемые услуги и программы для котов</h2>
-      <div class="services__container">
-        <div class="services__weigth-loss program">
+      <ul class="services__list">
+        <li class="services__item program program--weight-loss">
           <h3 class="program__title">Похудение</h3>
           <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="program__link" href="#">Каталог slim</a>
-        </div>
-        <div class="services__weigth-gain program">
+        </li>
+        <li class="services__item program program--weight-gain">
           <h3 class="program__title">Набор массы</h3>
           <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="program__link" href="#">Каталог pro</a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
     <section class="advantages">
       <div class="advantages__container">
@@ -71,18 +79,26 @@
       <div class="examples__container">
         <h2 class="examples__title">Живой пример</h2>
         <p class="examples__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="examples__statistics statistics">
-          <dt class="statistics__index">5 кг</dt>
-          <dd class="statistics__description">снижение веса</dd>
-        </dl>
-        <dl class="examples__statistics statistics">
-          <dt class="statistics__index">60 дней</dt>
-          <dd class="statistics__description">затрачено времени</dd>
+        <dl class="examples__statistics">
+          <div class="statistics">
+            <dt class="statistics__index">5 кг</dt>
+            <dd class="statistics__description">снижение веса</dd>
+          </div>
+          <div class="statistics">
+            <dt class="statistics__index">60 дней</dt>
+            <dd class="statistics__description">затрачено времени</dd>
+          </div>
         </dl>
         <p class="examples__cost">Затраты на питание: <span class="examples__cost-value">15 000 руб.</span></p>
         <div class="examples__slider slider">
-          <img class="slider__image-before" width="280" height="256" src="#" alt="Фотография кота до программы">
-          <img class="slider__image-after" width="280" height="256" src="#" alt="Фотография кота после программы">
+          <picture>
+            <source width="280" height="256" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet-desktop@1x.png 1x, images/cat-before-tablet-desktop@2x.png 2x">
+            <img class="slider__image slider__image--before" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Фотография кота до программы">
+          </picture>
+          <picture>
+            <source width="280" height="256" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet-desktop@1x.png 1x, images/cat-after-tablet-desktop@2x.png 2x">
+            <img class="slider__image slider__image--after" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Фотография кота после программы">
+          </picture>
           <button class="slider__range" type="button">
             <span class="visually-hidden">Ползунок</span>
           </button>
@@ -95,7 +111,11 @@
         <p class="contacts__heading">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <img class="contacts__map" width="320" height="362" src="#" alt="Карта с месторасположением компании Cat Energy">
+      <picture>
+        <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
+        <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
+        <img class="contacts__map" width="320" height="362" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" alt="Карта с месторасположением компании Cat Energy">
+      </picture>
     </section>
   </main>
   <footer class="footer">
@@ -122,9 +142,7 @@
       </ul>
       <a class="footer__copyrights copyrights" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="copyrights__htmlacademy-text">HTML Academy</p>
-        <svg class="copyrights__htmlacademy-logo" width="27" height="34" viewBox="0 0 27 34" fill="#666666" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666" />
-        </svg>
+        <img class="copyrights__htmlacademy-logo" width="27" height="34" src="#" alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>
