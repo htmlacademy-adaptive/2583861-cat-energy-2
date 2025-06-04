@@ -1,0 +1,54 @@
+.promo {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/index-background-mobile@1x.jpg"), linear-gradient(to right, #4f4f55 50%, #343437 100%);
+  background-size: 100% 66%, 320px 302px, 100% 66%;
+  background-repeat: no-repeat;
+  background-position: left top, top center, left top;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/index-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+  }
+}
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  padding: 27px 20px 0;
+  text-align: center;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include font($secondary-font, 36px, 36px, $alternative-color);
+
+  @media (min-width: $tablet-width) {
+    color: $main-color;
+    text-align: left;
+  }
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+
+  @include font($secondary-font, 14px, 14px, $alternative-color, uppercase);
+
+  @media (min-width: $tablet-width) {
+    color: $main-color;
+    text-align: left;
+  }
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto;
+}

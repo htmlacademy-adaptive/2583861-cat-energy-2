@@ -1,0 +1,11 @@
+.examples {
+  background-color: $alternative-background-color;
+}
+
+.examples__title {
+  @include font($secondary-font, 36px, 40px, $main-color);
+}
+
+.examples__cost {
+  @include font($secondary-font, 14px, 20px, $main-color, uppercase);
+}

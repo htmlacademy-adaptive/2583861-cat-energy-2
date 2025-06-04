@@ -1,0 +1,15 @@
+.product {
+  @media (min-width: $tablet-width) {
+    background-color: $secondary-background-color;
+    background-size: auto 430px;
+    background-position: center bottom;
+  }
+}
+
+.product__item-link {
+  text-decoration: none;
+}
+
+.product__title {
+  @include font($secondary-font, 16px, 20px, $primary-heading-color, uppercase);
+}

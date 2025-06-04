@@ -1,0 +1,7 @@
+.additional-offers__title {
+  @include font($secondary-font, 24px, 24px, $main-color);
+}
+
+.additional-offers__list {
+  list-style: none;
+}

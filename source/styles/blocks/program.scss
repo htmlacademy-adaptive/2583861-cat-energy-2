@@ -1,0 +1,16 @@
+.program {
+  background-color: $secondary-background-color;
+}
+
+.program__title {
+  @include font($secondary-font, 24px, 37px, $main-color, uppercase);
+}
+
+.program__description {
+  color: $primary-text-color;
+}
+
+.program__link {
+  @include font($secondary-font, 16px, 16px, $main-color, uppercase);
+  text-decoration: none;
+}

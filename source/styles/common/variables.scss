@@ -1,1 +1,24 @@
 /* здесь используйте глобальные переменные */
+
+// Размеры вьюпортов
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// Шрифты
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
+
+// Цвета шрифтов
+$main-color: #000000;
+$alternative-color: #ffffff;
+$primary-heading-color: #222222;
+$secondary-heading-color: #111111;
+$primary-text-color: #444444;
+
+// Цвета фонов
+$primary-background-color: #ffffff;
+$secondary-background-color: #f2f2f2;
+$alternative-background-color: #eaeaea;
+
+$primary-button-color: #68b738;
+$secondary-button-color: #f2f2f2;

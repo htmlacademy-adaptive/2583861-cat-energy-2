@@ -1,0 +1,13 @@
+.button {
+  @include font($secondary-font, 16px, 20px, $alternative-color, uppercase);
+  text-decoration: none;
+
+  &--primary {
+    background-color: $primary-button-color;
+  }
+
+  &--secondary {
+    color: $primary-text-color;
+    background-color: $secondary-button-color;
+  }
+}

@@ -1,0 +1,8 @@
+.additional-offer {
+  font-size: 14px;
+  font-weight: 14px;
+}
+
+.additional-offer__name {
+  @include font($secondary-font, 16px, 16px, $primary-heading-color, uppercase);
+}

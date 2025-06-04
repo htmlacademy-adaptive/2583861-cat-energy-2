@@ -1,0 +1,18 @@
+.contacts {
+  &--darker {
+    background-color: $secondary-background-color;
+  }
+}
+
+.contacts__heading {
+  @include font($secondary-font, 16px, 20px, $secondary-heading-color, uppercase);
+}
+
+.contacts__address {
+  line-height: 20px;
+  font-style: normal;
+}
+
+.contacts__map {
+  background-color: $secondary-background-color;
+}
