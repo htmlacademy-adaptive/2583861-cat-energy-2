@@ -1,7 +1,9 @@
 .additional-offers__title {
-  @include font($secondary-font, 24px, 24px, $main-color);
+  @include font($secondary-font, 24px, 24px, $primary-text-color);
 }
 
 .additional-offers__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }

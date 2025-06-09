@@ -1,9 +1,31 @@
 .copyrights {
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  color: inherit;
+
+  &::after {
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../icons/stack.svg#html-academy-logo");
+    mask-repeat: no-repeat;
+    background-color: #666666;
+    content: "";
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $element-background-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyrights__htmlacademy-text {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
-  color: $primary-text-color;
 }

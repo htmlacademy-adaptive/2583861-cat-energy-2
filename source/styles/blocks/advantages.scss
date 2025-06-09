@@ -1,7 +1,38 @@
 .advantages__title {
-  @include font($secondary-font, 36px, 40px, $main-color);
+  @include font($secondary-font, 36px, 40px, $primary-text-color);
 }
 
 .advantages__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.advantages__item {
+  &::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $element-background-color;
+    background-size: 30px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--leaf::before {
+    background-image: url("../../icons/stack.svg#leaf-icon");
+  }
+
+  &--cook::before {
+    background-image: url("../../icons/stack.svg#cook-icon");
+  }
+
+  &--cutlery::before {
+    background-image: url("../../icons/stack.svg#eat-icon");
+  }
+
+  &--clock::before {
+    background-image: url("../../icons/stack.svg#clock-icon");
+  }
 }

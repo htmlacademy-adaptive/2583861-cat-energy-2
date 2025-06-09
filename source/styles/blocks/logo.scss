@@ -1,1 +1,6 @@
-/* сюда добавляйте стили */
+.logo__text {
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 21px;
+  }
+}

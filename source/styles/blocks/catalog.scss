@@ -1,7 +1,9 @@
 .catalog__title {
-  @include font($secondary-font, 36px, 36px, $main-color);
+  @include font($secondary-font, 36px, 36px, $primary-text-color);
 }
 
 .catalog__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }

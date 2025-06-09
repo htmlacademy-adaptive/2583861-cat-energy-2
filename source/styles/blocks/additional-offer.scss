@@ -4,5 +4,5 @@
 }
 
 .additional-offer__name {
-  @include font($secondary-font, 16px, 16px, $primary-heading-color, uppercase);
+  @include font($secondary-font, 16px, 16px, $secondary-text-color, uppercase);
 }

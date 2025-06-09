@@ -16,14 +16,21 @@
 <body class="page__body">
   <header class="header">
     <a class="header__logo logo" href="index.html">
-      <img class="logo__image" width="33" height="38" src="#" alt="Торговый знак Cat Energy с изображением кота">
-      <img class="logo__text" width="33" height="38" src="#" alt="Текстовый логотип Cat Energy">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-energy-logo-desktop.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-logo-tablet.svg" width="60" height="50">
+        <img class="logo__image" src="images/cat-energy-logo-mobile.svg" width="33" height="38" alt="Торговый знак Cat Energy с изображением кота">
+      </picture>
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-text-lighter.svg">
+        <img class="logo__text" src="images/cat-energy-text-darker.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
+      </picture>
     </a>
     <nav class="header__navigation navigation">
-      <button class="navigation__toggle" type="button">
+      <button class="navigation__toggle navigation__toggle--active" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="navigation__list">
+      <ul class="navigation__list navigation__list--opened">
         <li class="navigation__item">
           <a class="navigation__link navigation__link--current" href="#">Главная</a>
         </li>
@@ -121,7 +128,7 @@
   <footer class="footer">
     <div class="footer__container">
       <a class="footer__logo logo" href="index.html">
-        <img class="logo__text" width="33" height="38" src="#" alt="Текстовый логотип Cat Energy">
+        <img class="logo__text" src="images/cat-energy-text-darker.svg" width="128" height="24" alt="Текстовый логотип Cat Energy">
       </a>
       <ul class="footer__socials socials">
         <li class="socials__item">
@@ -142,7 +149,6 @@
       </ul>
       <a class="footer__copyrights copyrights" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="copyrights__htmlacademy-text">HTML Academy</p>
-        <img class="copyrights__htmlacademy-logo" width="27" height="34" src="#" alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>

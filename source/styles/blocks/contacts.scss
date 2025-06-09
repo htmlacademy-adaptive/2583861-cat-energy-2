@@ -1,11 +1,11 @@
 .contacts {
   &--darker {
-    background-color: $secondary-background-color;
+    background-color: $block-background-color;
   }
 }
 
 .contacts__heading {
-  @include font($secondary-font, 16px, 20px, $secondary-heading-color, uppercase);
+  @include font($secondary-font, 16px, 20px, #111111, uppercase);
 }
 
 .contacts__address {
@@ -14,5 +14,5 @@
 }
 
 .contacts__map {
-  background-color: $secondary-background-color;
+  background-color: $block-background-color;
 }

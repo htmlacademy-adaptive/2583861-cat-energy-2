@@ -1,8 +1,30 @@
+.navigation__toggle {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  background-image: url("../../icons/stack.svg#menu-open-icon");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+
+  &--active {
+    background-image: url("../../icons/stack.svg#menu-close-icon");
+    background-size: 18px 18px;
+  }
+}
+
 .navigation__list {
+  display: none;
+  margin: 0;
+  padding: 0;
   list-style: none;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .navigation__link {
-  @include font($secondary-font, 20px, 20px, $main-color, uppercase);
+  @include font($secondary-font, 20px, 20px, $primary-text-color, uppercase);
   text-decoration: none;
 }

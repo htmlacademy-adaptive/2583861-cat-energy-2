@@ -1,3 +1,14 @@
 .footer {
-  background-color: $secondary-background-color;
+  background-color: $block-background-color;
+}
+
+.footer__logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

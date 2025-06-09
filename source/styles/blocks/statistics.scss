@@ -1,5 +1,5 @@
 .statistics__index {
-  @include font($secondary-font, 24px, 24px, $main-color, uppercase);
+  @include font($secondary-font, 24px, 24px, $primary-text-color, uppercase);
 }
 
 .statistics__description {
