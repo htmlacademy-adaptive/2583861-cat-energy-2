@@ -1,9 +1,56 @@
+.catalog__container {
+  @media (max-width: calc($tablet - 1px)) {
+    padding: 27px 20px 25px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 65px 30px 74px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 74px auto 71px;
+    padding: 0;
+  }
+}
+
 .catalog__title {
+  margin: 0;
+
   @include font($secondary-font, 36px, 36px, $primary-text-color);
+
+  @media (max-width: calc($tablet - 1px)) {
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 84px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 63px;
+  }
+}
+
+.catalog__card {
+  @media (max-width: calc($tablet - 1px)) {
+    min-height: 209px;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 511px;
+  }
 }

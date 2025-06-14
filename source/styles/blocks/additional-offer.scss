@@ -1,8 +1,14 @@
 .additional-offer {
-  font-size: 14px;
-  font-weight: 14px;
+  line-height: 14px;
 }
 
 .additional-offer__name {
+  margin: 0;
+
   @include font($secondary-font, 16px, 16px, $secondary-text-color, uppercase);
+}
+
+.additional-offer__wrapper {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,1 +1,47 @@
-/* сюда добавляйте стили */
+.header__container {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 30px 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 55px auto 0;
+  }
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 5px;
+  flex-wrap: wrap;
+  width: calc(50% + 30px);
+  min-height: 66px;
+
+  @media (max-width: calc($tablet - 1px)) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+    width: 30%;
+    min-height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 59px;
+  }
+}
+
+.header__navigation {
+  @media (min-width: $tablet) {
+    width: 65%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 50%;
+  }
+}

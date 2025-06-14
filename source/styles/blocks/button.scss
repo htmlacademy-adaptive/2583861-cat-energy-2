@@ -1,4 +1,6 @@
 .button {
+  display: block;
+
   @include font($secondary-font, 16px, 20px, #ffffff, uppercase);
   text-decoration: none;
 
@@ -9,5 +11,10 @@
   &--secondary {
     color: #444444;
     background-color: #f2f2f2;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
   }
 }

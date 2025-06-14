@@ -1,3 +1,42 @@
+.subscribe__container {
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: calc($tablet - 1px)) {
+    padding: 40px 20px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 80px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 96px auto 104px;
+    padding: 0;
+  }
+}
+
 .subscribe__title {
+  margin: 0;
+  margin-bottom: 32px;
+
   @include font($secondary-font, 24px, 24px, $primary-text-color);
+
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    padding-left: 40px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.subscribe__form {
+  @media (min-width: $tablet) {
+    padding: 0 38px;
+  }
 }

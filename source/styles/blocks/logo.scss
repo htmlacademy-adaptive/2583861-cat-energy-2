@@ -1,4 +1,18 @@
+.logo__image {
+  display: block;
+
+  @media (min-width: $tablet) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 14px;
+  }
+}
+
 .logo__text {
+  display: block;
+
   @media (min-width: $desktop) {
     width: 118px;
     height: 21px;

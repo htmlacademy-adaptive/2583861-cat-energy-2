@@ -1,6 +1,4 @@
 .copyrights {
-  display: flex;
-  align-items: center;
   text-decoration: none;
   color: inherit;
 
@@ -10,6 +8,7 @@
     mask-image: url("../../icons/stack.svg#html-academy-logo");
     mask-repeat: no-repeat;
     background-color: #666666;
+    display: block;
     content: "";
   }
 
@@ -20,6 +19,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    width: 163px;
   }
 }
 

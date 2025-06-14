@@ -1,7 +1,59 @@
+.subscribe-form {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .subscribe-form__heading {
+  min-height: 48px;
+  margin: 0;
+  margin-bottom: 24px;
+
   @include font($secondary-font, 16px, 24px, $primary-text-color);
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+  }
 }
 
 .subscribe-form__email {
   @include font($secondary-font, 20px, 30px, #444444, uppercase);
+  box-sizing: border-box;
+
+  @media (max-width: calc($tablet - 1px)) {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 496px;
+  }
+}
+
+.subscribe-form__button {
+  width: 100%;
+  min-height: 56px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 26px;
+  border: none;
+
+  @media (min-width: $tablet) {
+    width: 256px;
+  }
 }
