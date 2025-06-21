@@ -10,6 +10,7 @@
     background-color: #666666;
     display: block;
     content: "";
+    transition: 0.3s;
   }
 
   &:hover::after,

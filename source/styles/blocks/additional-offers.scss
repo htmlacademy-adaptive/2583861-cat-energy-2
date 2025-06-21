@@ -1,10 +1,10 @@
 .additional-offers__container {
-  @media (max-width: calc($tablet - 1px)) {
-    padding: 0 20px;
+  @media (max-width: ($tablet - 1px)) {
+    padding: 0 20px 40px;
   }
 
   @media (min-width: $tablet) {
-    padding: 0 30px;
+    padding: 0 30px 80px;
   }
 
   @media (min-width: $desktop) {
@@ -13,17 +13,49 @@
     width: 1220px;
     margin: 0 auto;
     padding: 0;
+    padding-bottom: 96px;
   }
 }
 
 .additional-offers__title {
+  position: relative;
+  width: fit-content;
   margin: 0;
-  margin-bottom: 36px;
+  padding-right: 40px;
+  background-color: #ffffff;
 
   @include font($secondary-font, 24px, 24px, $primary-text-color);
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: #68b738;
+    box-shadow: 100vw 0 0 0 #68b738;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 34px;
+    box-shadow: -40px 0 0 0 #ffffff;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 80px;
+    padding-left: 40px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
   @media (min-width: $desktop) {
-    width: 100%;
+    padding-left: 0;
+    font-size: 40px;
+    line-height: 40px;
+    box-shadow: -40px 0 0 0 #ffffff;
   }
 }
 
@@ -32,42 +64,16 @@
   padding: 0;
   list-style: none;
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media (max-width: ($tablet - 1px)) {
     margin-bottom: 35px;
   }
 
-  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     margin-bottom: 70px;
   }
 
   @media (min-width: $desktop) {
     flex-grow: 1;
-  }
-}
-
-.additional-offers__item {
-  padding-top: 13px;
-
-  @media (min-width: $desktop) {
     margin-right: 80px;
-  }
-}
-
-.additional-offers__promotion {
-  margin: 0 auto;
-
-  @media (max-width: calc($tablet - 1px)) {
-    width: 280px;
-    min-height: 290px;
-  }
-
-  @media (min-width: $tablet) {
-    width: 708px;
-    min-height: 200px;
-  }
-
-  @media (min-width: $desktop) {
-    width: 245px;
-    min-height: 288px;
   }
 }

@@ -1,12 +1,8 @@
 .promo {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/index-background-mobile@1x.jpg"), linear-gradient(to right, #4f4f55 50%, #343437 100%);
-  background-size: 100% 64%, 320px 302px, 100% 64%;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), image-set(url("../../images/index-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/index-background-mobile@2x.jpg") type("image/jpeg") 2x), linear-gradient(to right, #4f4f55 50%, #343437 100%);
+  background-size: 100% 63%, 320px 302px, 100% 63%;
   background-repeat: no-repeat;
   background-position: left top, top center, left top;
-
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/index-background-mobile@2x.jpg"), linear-gradient(to right, #4f4f55 50%, #343437 100%);
-  }
 
   @media (min-width: $tablet) {
     background-image: none;
@@ -16,21 +12,15 @@
     &::before {
       position: absolute;
       top: 0;
+      left: 50%;
       display: block;
-      width: 100%;
+      min-width: 50%;
       min-height: 694px;
       content: "";
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/index-background-desktop@1x.jpg"), linear-gradient(to bottom, #4f4f55 50%, #4f4f55 100%);
-      background-size: 50% 100%, 720px 694px, 50% 100%;
-      background-position: right top;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), image-set(url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x), linear-gradient(to bottom, #313134 50%, #343438 100%);
+      background-position: left top;
       background-repeat: no-repeat;
       z-index: -1;
-    }
-
-    @media (min-resolution: 2dppx) {
-      &::before {
-        background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), url("../../images/index-background-desktop@2x.jpg"), linear-gradient(to bottom, #4f4f55 50%, #4f4f55 100%);
-      }
     }
   }
 }
@@ -38,22 +28,20 @@
 .promo__container {
   position: relative;
   text-align: center;
-  box-sizing: border-box;
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media (max-width: ($tablet - 1px)) {
     padding: 27px 20px 0;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     width: 708px;
-    margin: 0 auto;
-    padding: 65px 0 526px;
+    padding: 65px 30px 525px;
   }
 
   @media (min-width: $desktop) {
     width: 1220px;
     margin: 0 auto;
-    padding: 110px 0 266px;
+    padding: 110px 0 265px;
   }
 }
 
@@ -62,7 +50,7 @@
 
   @include font($secondary-font, 36px, 36px, #ffffff);
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media (max-width: ($tablet - 1px)) {
     margin-bottom: 25px;
   }
 
@@ -85,7 +73,7 @@
 
   @include font($secondary-font, 14px, 14px, #ffffff, uppercase);
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media (max-width: ($tablet - 1px)) {
     margin-bottom: 29px;
   }
 
@@ -106,11 +94,11 @@
 
 .promo__image {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 3px;
 
   @media (min-width: $tablet) {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     z-index: -1;
   }
 
@@ -122,17 +110,20 @@
 }
 
 .promo__button {
-  width: 100%;
   box-sizing: border-box;
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media (max-width: ($tablet - 1px)) {
+    width: 100%;
     padding: 10px 50px;
   }
 
   @media (min-width: $tablet) {
     width: 242px;
     margin-left: 90px;
+    margin-bottom: 1px;
     padding: 14px 25px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   @media (min-width: $desktop) {

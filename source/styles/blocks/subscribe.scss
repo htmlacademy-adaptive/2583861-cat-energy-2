@@ -1,37 +1,66 @@
+.subscribe {
+  position: relative;
+}
+
 .subscribe__container {
   width: 100%;
   box-sizing: border-box;
 
-  @media (max-width: calc($tablet - 1px)) {
-    padding: 40px 20px;
+  @media (max-width: ($tablet - 1px)) {
+    padding: 0 20px 40px;
   }
 
-  @media (min-width: $tablet) {
-    padding: 80px 30px;
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding: 0 30px 80px;
   }
 
   @media (min-width: $desktop) {
     width: 1220px;
-    margin: 96px auto 104px;
-    padding: 0;
+    margin: 0 auto;
+    padding-bottom: 104px;
   }
 }
 
 .subscribe__title {
+  position: relative;
+  width: fit-content;
   margin: 0;
-  margin-bottom: 32px;
+  padding-right: 40px;
+  background-color: #ffffff;
 
   @include font($secondary-font, 24px, 24px, $primary-text-color);
 
-  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: #68b738;
+    box-shadow: 100vw 0 0 0 #68b738;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 32px;
+    box-shadow: -40px 0 0 0 #ffffff;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 66px;
     padding-left: 40px;
     font-size: 32px;
     line-height: 32px;
   }
 
   @media (min-width: $desktop) {
+    margin-bottom: 72px;
+    padding-left: 0;
     font-size: 40px;
     line-height: 40px;
+    box-shadow: -40px 0 0 0 #ffffff;
   }
 }
 

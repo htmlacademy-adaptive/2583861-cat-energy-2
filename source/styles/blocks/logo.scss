@@ -1,5 +1,15 @@
 .logo__image {
   display: block;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet) {
     margin-right: 13px;
@@ -12,9 +22,19 @@
 
 .logo__text {
   display: block;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $desktop) {
-    width: 118px;
-    height: 21px;
+    min-width: 118px;
+    min-height: 21px;
   }
 }

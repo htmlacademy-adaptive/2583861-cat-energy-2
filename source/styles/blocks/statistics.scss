@@ -1,8 +1,51 @@
+.statistics {
+  text-align: center;
+}
+
 .statistics__index {
+  padding: 14px 15px 7px;
+
   @include font($secondary-font, 24px, 24px, $primary-text-color, uppercase);
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  @media (max-width: ($tablet - 1px)) {
+    width: 124px;
+    min-height: 56px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 162px;
+    min-height: 72px;
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .statistics__description {
+  position: relative;
+  top: -11px;
+  width: min-content;
+  margin: 0 auto;
+  padding: 0 16px;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
+  background-color: #eaeaea;
+
+  @media (min-width: $tablet) {
+    display: inline-block;
+    width: auto;
+    max-width: 125px;
+    padding: 0 9px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: #f2f2f2;
+  }
 }

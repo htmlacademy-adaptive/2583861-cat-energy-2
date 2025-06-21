@@ -1,22 +1,32 @@
 .advantages__container {
-  @media (max-width: calc($tablet - 1px)) {
-    margin: 0 20px;
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 49px;
+    padding: 0 20px;
   }
 
-  @media (min-width: $tablet) {
-    margin: 0 105px 0 30px;
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding: 0 30px 46px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: $desktop) {
     width: 1220px;
-    margin: 0 auto;
+    margin: 0 auto 69px;
+    border-bottom: none;
   }
 }
 
 .advantages__title {
-  @include font($secondary-font, 36px, 40px, $primary-text-color);
   margin: 0;
   margin-bottom: 40px;
+
+  @include font($secondary-font, 36px, 40px, $primary-text-color);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .advantages__list {
@@ -26,15 +36,19 @@
 
   @media (min-width: $tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 54% 46%;
+    row-gap: 37px;
+    counter-reset: advantages__item 0;
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 324px 325px 325px 246px;
   }
 }
 
 .advantages__item {
+  position: relative;
+
   &::before {
     flex-shrink: 0;
     width: 60px;
@@ -45,6 +59,56 @@
     background-repeat: no-repeat;
     display: block;
     content: "";
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 250px;
+    padding-top: 40px;
+    padding-bottom: 57px;
+    font-size: 16px;
+    line-height: 24px;
+    counter-increment: advantages__item 1;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
+
+    &::after {
+      content: counter(advantages__item);
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      z-index: -1;
+    }
+
+    &--leaf {
+      width: 227px;
+    }
+
+    &--cook {
+      width: 246px;
+    }
+
+    &--cutlery {
+      width: 247px;
+    }
+
+    &--clock {
+      width: 249px;
+    }
   }
 
   &--leaf::before {
@@ -61,16 +125,5 @@
 
   &--clock::before {
     background-image: url("../../icons/stack.svg#clock-icon");
-  }
-
-  @media (max-width: calc($tablet - 1px)) {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: $tablet) {
-    min-height: 280px;
   }
 }

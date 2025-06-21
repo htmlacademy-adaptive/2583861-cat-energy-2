@@ -1,10 +1,12 @@
 .services__container {
-  @media (max-width: calc($tablet - 1px)) {
-    margin: 0 20px 20px;
+  @media (max-width: ($tablet - 1px)) {
+    padding: 20px 20px 0;
+    margin-bottom: 20px;
   }
 
-  @media (min-width: $tablet) {
-    margin: 0 30px 45px;
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding: 0 30px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop) {
@@ -26,15 +28,11 @@
 }
 
 .services__item {
-  @media (max-width: calc($tablet - 1px)) {
-    min-height: 266px;
+  @media (max-width: ($tablet - 1px)) {
+    margin: 0 auto 20px;
   }
 
-  @media (min-width: $tablet) {
-    min-height: 372px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 374px;
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    margin-bottom: 30px;
   }
 }
