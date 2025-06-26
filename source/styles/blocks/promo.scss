@@ -1,5 +1,5 @@
 .promo {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), image-set(url("../../images/index-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/index-background-mobile@2x.jpg") type("image/jpeg") 2x), linear-gradient(to right, #4f4f55 50%, #343437 100%);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), image-set(url("../../images/index-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/index-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/index-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/index-background-mobile@2x.jpg") type("image/jpeg") 2x), linear-gradient(to right, #4f4f55 50%, #343437 100%);
   background-size: 100% 63%, 320px 302px, 100% 63%;
   background-repeat: no-repeat;
   background-position: left top, top center, left top;
@@ -17,7 +17,7 @@
       min-width: 50%;
       min-height: 694px;
       content: "";
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), image-set(url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x), linear-gradient(to bottom, #313134 50%, #343438 100%);
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%), image-set(url("../../images/index-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/index-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x), linear-gradient(to bottom, #313134 50%, #343438 100%);
       background-position: left top;
       background-repeat: no-repeat;
       z-index: -1;
@@ -35,6 +35,7 @@
 
   @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     width: 708px;
+    margin: 0 auto;
     padding: 65px 30px 525px;
   }
 

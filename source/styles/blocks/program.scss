@@ -4,11 +4,7 @@
 
   &--weight-loss::before {
     position: absolute;
-    top: 24px;
-    left: 20px;
     display: block;
-    width: 50px;
-    height: 50px;
     background-color: $element-background-color;
     border-radius: 50%;
     content: "";
@@ -16,11 +12,7 @@
 
   &--weight-loss::after {
     position: absolute;
-    top: 21px;
-    left: 27px;
     display: block;
-    width: 36px;
-    height: 50px;
     background-image: url("../../icons/stack.svg#cat-slim-icon");
     background-repeat: no-repeat;
     background-position: center;
@@ -29,11 +21,7 @@
 
   &--weight-gain::before {
     position: absolute;
-    top: 24px;
-    left: 21px;
     display: block;
-    width: 50px;
-    height: 50px;
     background-color: $element-background-color;
     border-radius: 50%;
     content: "";
@@ -41,11 +29,7 @@
 
   &--weight-gain::after {
     position: absolute;
-    top: 35px;
-    left: 12px;
     display: block;
-    width: 67px;
-    height: 28px;
     background-image: url("../../icons/stack.svg#cat-pro-icon");
     background-repeat: no-repeat;
     background-position: center;
@@ -54,35 +38,63 @@
 
   @media (max-width: ($tablet - 1px)) {
     padding: 30px 20px 18px;
+
+    &--weight-loss::before {
+      top: 24px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--weight-loss::after {
+      top: 21px;
+      left: 27px;
+      width: 36px;
+      height: 50px;
+    }
+
+    &--weight-gain::before {
+      top: 24px;
+      left: 21px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--weight-gain::after {
+      top: 35px;
+      left: 12px;
+      width: 67px;
+      height: 28px;
+    }
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     padding: 77px 45% 53px 53px;
 
     &--weight-loss::before {
       top: 92px;
-      left: 63%;
+      right: 63px;
       width: 200px;
       height: 200px;
     }
 
     &--weight-loss::after {
       top: 81px;
-      left: 67%;
+      right: 93px;
       width: 140px;
       height: 194px;
     }
 
     &--weight-gain::before {
       top: 91px;
-      left: 63%;
+      right: 63px;
       width: 200px;
       height: 200px;
     }
 
     &--weight-gain::after {
       top: 135px;
-      left: 58%;
+      right: 29px;
       width: 268px;
       height: 112px;
     }
@@ -148,6 +160,7 @@
 
   @media (max-width: ($tablet - 1px)) {
     margin-bottom: 38px;
+    min-height: 90px;
 
     &::after {
       position: absolute;
@@ -161,12 +174,14 @@
   }
 
   @media (min-width: $tablet) {
+    min-height: 96px;
     margin-bottom: 48px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop) {
+    min-height: 72px;
     margin-bottom: 23px;
   }
 }

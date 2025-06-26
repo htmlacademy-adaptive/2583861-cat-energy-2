@@ -91,6 +91,10 @@
     line-height: 20px;
     text-align: right;
   }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .additional-product__button {

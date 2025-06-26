@@ -25,7 +25,6 @@
 
 .footer__logo {
   display: block;
-  width: 128px;
   transition: 0.3s;
 
   &:hover,
@@ -38,7 +37,12 @@
   }
 
   @media (max-width: ($tablet - 1px)) {
+    width: 128px;
     margin: 0 auto 20px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 165px;
   }
 }
 
@@ -50,7 +54,7 @@
   }
 
   @media (min-width: $tablet) {
-    min-width: 169px;
+    min-width: 132px;
     max-width: 50%;
   }
 }

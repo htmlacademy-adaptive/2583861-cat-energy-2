@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <title>Функциональное питание для котов Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Сайт функционального питания Cat Energy: подбор программ питания, интернет-магазин">
+  <link rel="preload" href="images/index-can-mobile@2x.webp" type="image/webp" as="image" media="(max-width: 767px)">
+  <link rel="preload" href="images/index-background-mobile@2x.webp" type="image/webp" as="image" media="(max-width: 767px)">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
@@ -14,7 +19,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" data-test="header">
     <div class="header__container">
       <a class="header__logo logo" href="index.html">
         <picture>
@@ -46,11 +51,14 @@
     </div>
   </header>
   <main>
-    <section class="promo">
+    <section class="promo" data-test="hero">
       <div class="promo__container">
         <h1 class="promo__title">Функциональное <br> питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <picture>
+          <source width="552" height="499" type="image/webp" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x">
+          <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x">
+          <source width="280" height="270" type="image/webp" srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x">
           <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
           <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
           <img class="promo__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Изображение баночки с кошачьим питанием Cat Energy">
@@ -58,7 +66,7 @@
         <a class="promo__button button button--primary" href="#">Подобрать программу</a>
       </div>
     </section>
-    <section class="services">
+    <section class="services" data-test="programs">
       <div class="services__container">
         <h2 class="visually-hidden">Предлагаемые услуги и программы для котов</h2>
         <ul class="services__list">
@@ -75,7 +83,7 @@
         </ul>
       </div>
     </section>
-    <section class="advantages">
+    <section class="advantages" data-test="features">
       <div class="advantages__container">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
@@ -86,7 +94,7 @@
         </ul>
       </div>
     </section>
-    <section class="examples">
+    <section class="examples" data-test="proof">
       <div class="examples__container">
         <h2 class="examples__title">Живой пример</h2>
         <p class="examples__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -106,14 +114,18 @@
         <div class="examples__slider slider">
           <div class="slider__image-before">
             <picture>
+              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-before-tablet-desktop@1x.webp 1x, images/cat-before-tablet-desktop@2x.webp 2x">
+              <source width="280" height="256" type="image/webp" srcset="images/cat-before-mobile@1x.webp 1x, images/cat-before-mobile@2x.webp 2x">
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet-desktop@1x.png 1x, images/cat-before-tablet-desktop@2x.png 2x">
-              <img class="slider__image slider__image--before" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Фотография кота до программы">
+              <img class="slider__image slider__image--before" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Фотография кота до программы" loading="lazy">
             </picture>
           </div>
           <div class="slider__image-after">
             <picture>
+              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-after-tablet-desktop@1x.webp 1x, images/cat-after-tablet-desktop@2x.webp 2x">
+              <source width="280" height="256" type="image/webp" srcset="images/cat-after-mobile@1x.webp 1x, images/cat-after-mobile@2x.webp 2x">
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet-desktop@1x.png 1x, images/cat-after-tablet-desktop@2x.png 2x">
-              <img class="slider__image slider__image--after" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Фотография кота после программы">
+              <img class="slider__image slider__image--after" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Фотография кота после программы" loading="lazy">
             </picture>
           </div>
           <button class="slider__range" type="button">
@@ -122,7 +134,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts contacts--nojs">
+    <section class="contacts contacts--nojs" data-test="contacts">
       <div class="contacts__container">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Наши контакты</h2>
@@ -132,18 +144,21 @@
           </address>
         </div>
         <div class="contacts__map-wrapper">
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428319078!2d30.320508377320824!3d59.93879686208728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1750173124787!5m2!1sru!2sru" width="600" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          <iframe class="contacts__map" title="Google Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989428319078!2d30.320508377320824!3d59.93879686208728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1750173124787!5m2!1sru!2sru" width="600" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
           <picture>
+            <source width="1440" height="400" type="image/webp" media="(min-width: 1440px)" srcset="images/location-desktop@1x.webp 1x, images/location-desktop@2x.webp 2x">
+            <source width="768" height="400" type="image/webp" media="(min-width: 768px)" srcset="images/location-tablet@1x.webp 1x, images/location-tablet@2x.webp 2x">
+            <source width="320" height="362" type="image/webp" srcset="images/location-mobile@1x.webp 1x, images/location-mobile@2x.webp 2x">
             <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
             <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
-            <img class="contacts__location" width="320" height="362" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" alt="Карта с месторасположением компании Cat Energy">
+            <img class="contacts__location" width="320" height="362" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" alt="Карта с месторасположением компании Cat Energy" loading="lazy">
           </picture>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" data-test="footer">
     <div class="footer__container">
       <a class="footer__logo logo" href="index.html">
         <img class="logo__text" src="images/cat-energy-text-darker.svg" width="128" height="24" alt="Текстовый логотип Cat Energy">
