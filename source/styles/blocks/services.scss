@@ -1,0 +1,38 @@
+.services__container {
+  @media (max-width: ($tablet - 1px)) {
+    padding: 20px 20px 0;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding: 0 30px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 0 auto 71px;
+  }
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.services__item {
+  @media (max-width: ($tablet - 1px)) {
+    margin: 0 auto 20px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,158 @@
+.examples {
+  position: relative;
+
+  @media (max-width: ($tablet - 1px)) {
+    background-color: #eaeaea;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    background-image: linear-gradient(to top, #eaeaea 462px, #ffffff 462px, #ffffff 100%);
+  }
+
+  @media (min-width: $desktop) {
+    background-image: linear-gradient(to bottom, #ffffff 136px, #f2f2f2 136px, #f2f2f2 100%);
+  }
+}
+
+.examples__container {
+  position: relative;
+
+  @media (max-width: ($tablet - 1px)) {
+    padding: 25px 20px 40px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding: 45px 30px 101px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 0 auto;
+    padding-bottom: 75px;
+  }
+}
+
+.examples__title {
+  margin: 0;
+
+  @include font($secondary-font, 36px, 40px, $primary-text-color);
+
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 50%;
+    margin-bottom: 146px;
+  }
+}
+
+.examples__text {
+  margin: 0;
+
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 20px;
+    min-height: 108px;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 72px;
+    margin-bottom: 56px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 436px;
+    margin-bottom: 69px;
+  }
+}
+
+.examples__wrapper {
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 85px;
+  }
+}
+
+.examples__statistics {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+  @media (max-width: ($tablet - 1px)) {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 43px;
+    width: 55%;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 42px;
+    gap: 42px;
+  }
+}
+
+.examples__cost {
+  margin: 0;
+
+  @include font($secondary-font, 14px, 20px, $primary-text-color, uppercase);
+
+  @media (max-width: ($tablet - 1px)) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding-top: 11px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 50%;
+    font-size: 20px;
+  }
+}
+
+.examples__cost-value {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 63px;
+  }
+}
+
+.examples__slider {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 1px;
+    right: 0;
+  }
+}

@@ -1,1 +1,15 @@
-/* здесь используйте глобальные переменные */
+// Размеры вьюпортов
+$tablet: 768px;
+$desktop: 1440px;
+
+// Шрифты
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
+
+// Цвета шрифтов
+$primary-text-color: #000000;
+$secondary-text-color: #222222;
+
+// Цвета фонов
+$block-background-color: #f2f2f2;
+$element-background-color: #68b738;
