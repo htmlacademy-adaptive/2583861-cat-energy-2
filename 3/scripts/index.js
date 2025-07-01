@@ -1,1 +1,0 @@
-document.querySelector(".navigation").classList.remove("navigation--nojs");document.querySelector(".contacts").classList.remove("contacts--nojs");var t=document.querySelector(".navigation__toggle"),e=document.querySelector(".navigation__list");t.addEventListener("click",()=>{e.classList.toggle("navigation__list--opened"),t.classList.toggle("navigation__toggle--active")});
