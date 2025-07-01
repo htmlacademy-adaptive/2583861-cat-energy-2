@@ -9,6 +9,11 @@
   cursor: pointer;
   transition: 0.3s;
 
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   &--primary {
     background-color: $element-background-color;
 
